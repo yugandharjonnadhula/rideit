@@ -14,7 +14,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table(name="customer")
+//@Table(name="customer")
+@Table(name="customer_info")
 @Builder
 public class Customer {
     @Id
