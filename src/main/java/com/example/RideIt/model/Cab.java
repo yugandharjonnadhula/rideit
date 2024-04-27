@@ -16,12 +16,23 @@ public class Cab {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    String company;
+
+   // String company;
+
+   @Column(unique = true, nullable = false)
+   String cabNo;
+
     String carModel;
+
+    boolean available;
+
     @Enumerated(EnumType.STRING)
     CarType carType;
+
     int numberOfSeats;
+
     double farePerKm;
+
     @OneToOne
     @JoinColumn(name="driver_id")
     Driver driver;

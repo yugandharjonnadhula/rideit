@@ -15,20 +15,25 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 //@Table(name="customer")
-@Table(name="customer_info")
+//@Table(name="customer_info")
 @Builder
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+
     String name;
+
     int age;
 
     @Column(unique = true, nullable = false)
     String emailId;
+
     String address;
+
     @Enumerated(EnumType.STRING)
     Gender gender;
+
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     List<TripBooking> bookings = new ArrayList<>();
 }
