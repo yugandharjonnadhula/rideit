@@ -31,4 +31,5 @@ public class TripBookingResponse {
     CustomerResponse customerResponse;
 
     DriverResponse driverResponse;
+    String message;
 }

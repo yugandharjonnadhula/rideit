@@ -34,4 +34,9 @@ public class DriverService {
         driverRepository.save(driver);  // save both driver and cab
         return "Driver and Cab saved successfully";
     }
+
+    public Driver getDriver(String mobNo) {
+        return driverRepository.findByMobNo(mobNo);
+    }
 }
+
